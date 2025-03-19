@@ -1,0 +1,61 @@
+1.
+Cognitive complexity is high (21). Refactor the method to reduce the cognitive complexity to 10 or less.
+
+Proposed Solution :
+
+Cognitive complexity is 3.
+
+public bool IsShopOpen(string day)
+{
+    if (string.IsNullOrEmpty(day)) // +1
+    {
+        return false; // +1
+    }
+
+    var openDays = new HashSet<string> { "friday", "saturday", "sunday" };
+    return openDays.Contains(day.ToLower()); // +1
+}
+
+2.
+Cognitive complexity is high (21). Refactor the method to reduce the cognitive complexity to 10 or less.
+
+Proposed Solution :
+
+Cognitive complexity is 7.
+
+public long Fibonacci(int n)
+{
+    if (n >= 50)
+    {
+        throw new System.Exception("Not supported");
+    }
+ 
+    if (n == 0)
+    {
+        return 0;
+    }
+ 
+    if (n == 1)
+    {
+        return 1;
+    }
+ 
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+
+3.
+Use of `li` variable is not clear. Refactor the method to make it more readable.
+
+4.
+userRole==8 is not readable and there is hardcoding, 
+can have a const for Admin e.g.
+ 
+const string AdminRole="Admin"
+ 
+if (userRole == AdminRole)
+
+5. 
+No need to repeat `Car` prefix for properties since the class name is already `Car`.
+
+6.
+ No need to check for null can be defined directly
